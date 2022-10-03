@@ -109,7 +109,25 @@ print(6. / 3) #output is 2.0
 print(6. / 3.) #output is 2.0
 ```
 5. Integer division ("//")
-6. Modulo ("%")
+```python
+print(6 // 4) #output is 1
+print(6. // 4) #output is 1.0
+print(-6 // 4) #output is -2
+print(6. // -4) #output is -2.0
+```
+
+   This is very important: rounding always goes to the lesser integer.
+
+6. Remaimder ("%")
+
+  The result of the operator is a remainder left after the integer division.
+
+  Remaimder is sometimes called **modulo** in other programming languages.
+```python
+print(14 % 4) #output is 2
+print(12 % 4.5) #output is 3.0 
+```
+
 7. Exponentiation (**)
 ```python
 print(2 ** 3) #output is 8
@@ -118,4 +136,24 @@ print(2. ** 3) #output is 8.0
 print(2. ** 3.) #output is 8.0
 ```
 
-    
+**Operators bindings**:
+* Most of Python's operators have left-sided binding, which means that the calculation of the expression is conducted from left to right.
+* But there is an exception, the exponentiation operator uses right-sided binding.
+```python
+print(2 ** 2 ** 3) #output is 256
+```
+
+**Operator priorities**:
+| Priority  |     Operator      | 
+| --------- |:-----------------:| 
+|     1     |     **            |
+|     2     |     +,- (unary)   |
+|     3     |     *, /, //, %   |
+|     4     |     +, -(binary)  |
+
+## Variables
+**Name Convention**
+* The name of the variable must be composed of upper-case or lower-case letters, digits, and the character _ (underscore).
+* The name of the variable must begin with a letter.
+* Upper- and lower-case letters are treated as different.
+* The name of the variable must not be any of Python's reserved words .
