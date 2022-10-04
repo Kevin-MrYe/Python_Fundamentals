@@ -240,6 +240,11 @@ print(2. ** 3.) #output is 8.0
 |      0     |      0     |  0  |  1  |    1  |
 |      1     |      0     |  0  |  1  |    1  |
 |      1     |      0     |  1  |  1  |    0  |
+Let's make it easier:
+
+* & requires exactly two 1s to provide 1 as the result;
+* | requires at least one 1 to provide 1 as the result;
+* ^ requires exactly one 1 to provide 1 as the result.
 
 | Argument | ~Argument|
 | -------- |:--------:|
@@ -256,14 +261,23 @@ print(2 ** 2 ** 3) #output is 256
 ```
 
 **Operator priorities**:
-| Priority  |     Operator      | 
-| --------- |:-----------------:| 
-|     1     |     **            |
-|     2     |     +,- (unary)   |
-|     3     |     *, /, //, %   |
-|     4     |     +, -(binary)  |
-|     5     |     <,<=,>,>=     |
-|     6     |     ==, !=        |
+| Priority  |     Operator       | 
+| --------- |:------------------:| 
+|     1     |     **             |
+|     2     |     ~,+,- (unary)  |
+|     3     |     *, /, //, %    |
+|     4     |     +, -(binary)   |
+|     5     |     <<,>>          |
+|     6     |     &              |
+|     7     |     ^              |
+|     8     |     \|             |
+|     9     |     <,<=,>,>=,==,!=|
+|     10    |     not X          |
+|     11    |     and            |
+|     12    |     or             |
+
+
+
 
 ## Variables
  A **variable** is a named location reserved to store values in the memory. A variable is created or initialized automatically when you assign a value to it for the first time.
