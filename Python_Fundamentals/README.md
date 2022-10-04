@@ -101,7 +101,7 @@ print(type(x)) #output is <class 'str'>
 
 6. **None**: It is used to represent the absence of a value.
 
-## Operators
+## Arithmetic Operators
 **Unary operator** vs **binary operator**:
 ```
 * A unary operator is an operator with only one operand, e.g., -1, or +3.
@@ -191,6 +191,14 @@ print(2. ** 3.) #output is 8.0
     print(var) #output is 4
     
     ```
+## Relational Operators
+
+1. Equal to ("==")
+2. Not equal to ("!=")
+3. Greater than (">")
+4. Greater than or equal to (">=")
+5. Less than ("<")
+6. Less than or equal to ("<=")
 
 **Operators bindings**:
 * Most of Python's operators have left-sided binding, which means that the calculation of the expression is conducted from left to right.
@@ -206,6 +214,8 @@ print(2 ** 2 ** 3) #output is 256
 |     2     |     +,- (unary)   |
 |     3     |     *, /, //, %   |
 |     4     |     +, -(binary)  |
+|     5     |     <,<=,>,>=     |
+|     6     |     ==, !=        |
 
 ## Variables
  A **variable** is a named location reserved to store values in the memory. A variable is created or initialized automatically when you assign a value to it for the first time.
