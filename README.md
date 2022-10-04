@@ -8,6 +8,6 @@ Click the corresponding dicectory and you will see the source file and explainat
   * Definitions of terms
   * Print ( )
   * Input ( )
-  * Literals ( )
+  * Literals
   * Operators
   * Variables
