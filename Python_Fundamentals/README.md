@@ -84,9 +84,12 @@ print(type(x)) #output is <class 'str'>
 
     Scientific notation: 3E8 = 3*pow(10,8)
 
-    **Note**:
+    **Note1**:
     The exponent (the value after the E) has to be an integer;
     The base (the value in front of the E) may be an integer.
+    
+    **Note2**: you can omit zero when it is the only digit in front of or after the decimal point.
+    0.4 = .4 , 4.0 = 4.
 
 4. **Boolean** : The two constant objects True and False used to represent truth values.
 
