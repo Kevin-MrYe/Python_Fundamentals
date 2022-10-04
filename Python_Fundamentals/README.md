@@ -30,20 +30,49 @@ The end parameter specifies what to print at the end of the print statement.
 
 
 ## Input ( )
+Input() function gets data from the console. The result of the input() function is a **string**. 
+```python
+x = input("Enter a number: ") # The user enters 2
+print(type(x)) #output is <class 'str'>
+```
+
+**Type casting**
+* int() : convert one argument into an integer
+* float() : convert one argument into a float
+* str() : convert a number into a string
 
 ## Literals
-A literal is data whose values are determined by the literal itself.
+    A literal is data whose values are determined by the literal itself.
 
 1. **String** : "I am a literal."
 
-  Escape Character: \
+    Escape Character: \
   
-  ```python
-  'I\'m happy' = "I'm happy"
-  ```
-  Two ways to encode apostrophe or quote:
-  * Using Escape character \
-  * Open and close the string using an opposite set of symbols(e.g., "I'm happy.",  'He loves "Python" very much' )
+    ```python
+    'I\'m happy' = "I'm happy"
+    ```
+    Two ways to encode apostrophe or quote:
+    * Using Escape character \
+    * Open and close the string using an opposite set of symbols(e.g., "I'm happy.",  'He loves "Python" very much' )
+    
+    **Concatenation(+)**
+    
+    Must ensure that both its arguments are strings.
+    ```python
+    num_1 = input("Enter the first number: ") # Enter 12
+    num_2 = input("Enter the second number: ") # Enter 21
+    print(num_1 + num_2) # the program returns 1221
+    
+    ```
+    
+    **Replication(*)**
+    
+    A number less than or equal to zero produces an empty string.
+    ```python
+    my_input = input("Enter something: ") # Example input: hello
+    print(my_input * 3) #output: hellohellohello
+    print(my_input * (-1)) #output is empty
+    ```
 
 2. **Integers** : They are numbers written without a fractional component, e.g., 256, or -1 (negative integers).
 
@@ -136,6 +165,30 @@ print(2. ** 3) #output is 8.0
 print(2. ** 3.) #output is 8.0
 ```
 
+8. Compound assignment operators
+
+    If op is a two-argument operator (this is a very important condition) and the operator is used in the following context:
+    ```
+    variable = variable op expression
+    ```
+
+    It can be simplified and shown as follows:
+    ```
+    variable op= expression
+    ```
+    
+    ```python
+    var = 2
+    print(var) #output is 2
+
+    var = 3
+    print(var) #output is 3
+
+    var += 1
+    print(var) #output is 4
+    
+    ```
+
 **Operators bindings**:
 * Most of Python's operators have left-sided binding, which means that the calculation of the expression is conducted from left to right.
 * But there is an exception, the exponentiation operator uses right-sided binding.
@@ -152,8 +205,23 @@ print(2 ** 2 ** 3) #output is 256
 |     4     |     +, -(binary)  |
 
 ## Variables
+ A **variable** is a named location reserved to store values in the memory. A variable is created or initialized automatically when you assign a value to it for the first time.
+```python
+var = 1
+print(var) #output is 1
+```
+ 
 **Name Convention**
 * The name of the variable must be composed of upper-case or lower-case letters, digits, and the character _ (underscore).
 * The name of the variable must begin with a letter.
 * Upper- and lower-case letters are treated as different.
 * The name of the variable must not be any of Python's reserved words .
+
+**Combine text and variable**
+
+You can combine text and variables using the "+" operator, and use the print() function to output strings and variables
+```python
+var = "007"
+print("Agent " + var) #output is Agent007
+```
+
