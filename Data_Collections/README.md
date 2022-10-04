@@ -83,7 +83,7 @@ print(a) #output is ['num1', 123, 'num3']
 **5. Delete**
 - del
 - remove (value)
-- pop (index)
+- pop (index=-1)
 - clear
 ```python
 # del an element or the entire list
@@ -110,7 +110,70 @@ print(d) #output is []
 
 ```
 
+**Note:**
 
+- if remove() an element which is not in list, an exception is raised.
+- a.pop() simply removes the last item in the list:
+- pop() returns a value: the item that was removed.
+
+**6. Sorting a list**
+- sort()
+- sorted()
+- reverse()
+```python
+# sort() sort the list in-place
+lst1 = [5, 3, 1, 2, 4]
+lst1.sort()
+print(lst1)  # outputs: [1, 2, 3, 4, 5]
+
+# sorted() did not change list, not in-place
+lst2 = [5, 3, 1, 2, 4]
+print(sorted(lst2)) # outputs: [1, 2, 3, 4, 5]
+print(lst2)         # outputs: [5, 3, 1, 2, 4]
+
+# reverse() reverse the list in-place
+lst3 = [5, 3, 1, 2, 4]
+lst3.reverse()
+print(lst3) # outputs: [4, 2, 1, 3, 5]
+```
+
+## Slice
+
+Slice makes a brand new copy of a list, or parts of a list.
+```
+my_list[start:end:stepsize]
+```
+- start is the index of the first element included in the slice, default is 0.
+- end is the index of the first element not included in the slice, default  is length(list).
+- stepsize is the different between two adjacent elements in the slice, default is 1.
+
+```python
+lst1 = [1,2,3,4,5,6,7,8]
+
+# with stepsize
+lst2 = lst1[1:5:2]
+print(lst2) # output: [2, 4]
+
+# negative indice
+lst3 = lst1[1:-1]
+print(lst3) # output: [2, 3, 4, 5, 6, 7]
+
+# omit star, star from 0
+lst4 = lst1[:3]
+print(lst4) #output: [1, 2, 3]
+
+# omit end, end at len(my_list)
+lst5 = lst1[5:] 
+print(lst5) #output: [6, 7, 8]
+
+# omit star&end, makes a copy of the whole list
+lst6 = lst1[:]
+print(lst6) #output: [1, 2, 3, 4, 5, 6, 7, 8]
+
+# start is further than end, slice will be empty list
+lst7 = lst1[-1:2]
+print(lst7) #output:[]
+```
 
 ## Tuple
 
