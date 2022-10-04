@@ -200,6 +200,54 @@ print(2. ** 3.) #output is 8.0
 5. Less than ("<")
 6. Less than or equal to ("<=")
 
+## Logical operators
+
+1. And
+
+| Argument A  |     Argument B      | A and B |
+| ----------- |---------------------| :------:|
+|   False     |     False           | False   |
+|   False     |     True            | False   |
+|   True      |     False           | False   |
+|   True      |     True            | True    |
+
+
+2. Or
+
+| Argument A  |     Argument B      | A or B  |
+| ----------- |---------------------| :------:|
+|   False     |     False           | False   |
+|   False     |     True            | True    |
+|   True      |     False           | True    |
+|   True      |     True            | True    |
+
+3. Not
+
+| Argument    |  not Argument|
+| ----------- | :-----------:|
+|   False     |     True     |
+|   True      |     False    |
+
+## Bitwise operators
+1. &    (ampersand) - conjunction
+2. |    (bar) - disjunction
+3. ~    (tilde) - negation
+4. ^    (caret) - exclusive or(xor)
+
+| Argument A | Argument B | A&B | A\|B |  A^B  |
+| ---------- | ---------- | --- | --- | :---: |
+|      0     |      0     |  0  |  0  |    0  |
+|      0     |      0     |  0  |  1  |    1  |
+|      1     |      0     |  0  |  1  |    1  |
+|      1     |      0     |  1  |  1  |    0  |
+
+| Argument | ~Argument|
+| -------- |:--------:|
+|      0   |    1     |
+|      1   |    0     |
+
+
+
 **Operators bindings**:
 * Most of Python's operators have left-sided binding, which means that the calculation of the expression is conducted from left to right.
 * But there is an exception, the exponentiation operator uses right-sided binding.
