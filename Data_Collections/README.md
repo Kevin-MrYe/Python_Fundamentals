@@ -137,6 +137,18 @@ lst3.reverse()
 print(lst3) # outputs: [4, 2, 1, 3, 5]
 ```
 
+**In and not in Operator**
+
+Test if some items exist in a list or not using the keywords in and not in.
+```python
+my_list = ["A", "B", 1, 2]
+
+print("A" in my_list)  # outputs: True
+print("C" not in my_list)  # outputs: True
+print(2 not in my_list)  # outputs: False
+```
+
+
 ## Slice
 
 Slice makes a brand new copy of a list, or parts of a list.
@@ -175,8 +187,149 @@ lst7 = lst1[-1:2]
 print(lst7) #output:[]
 ```
 
+
+
 ## Tuple
+**Tuple Feature:**
+- Tuple is ordered
+- Tuple is immutable
+- Tuple can be nested
+- The values contained in the tuple don’t need to be the same type.
+
+A tuple is an immutable sequence type. It can behave like a list, but it mustn't be modified in situ. You can not append tuples, or modify, or remove tuple elements.
+
+
+
+**1. Create**
+- using parenthesis
+- using commas
+```python
+# using parenthesis
+tuple_1 = (1, 2, 4, 8)
+# using commas
+tuple_2 = 1., .5, .25, .125
+
+print(tuple_1) #output: (1, 2, 4, 8)
+print(tuple_2) #output: (1.0, 0.5, 0.25, 0.125)
+```
+
+  **Note:**
+  If creating a one-element tuple, having one element within parentheses is not enough. We will need a trailing comma to indicate that it is a tuple.
+  ```python
+  # define one-element with commas
+  one_element_tuple_1 = (1, )
+  one_element_tuple_2 = 1.,
+
+  # define one-element without commas
+  one_element_tuple_3 = (1)
+
+  print(one_element_tuple_1) #output: (1,)
+  print(one_element_tuple_2) #output: (1.0,)
+  print(one_element_tuple_3) #output: 1
+  ```
+
+**2. Read**
+- index
+- slice
+```python
+my_tuple = (1, 10, 100, 1000)
+
+# using index
+print(my_tuple[0]) #output: 1
+
+# using negative index
+print(my_tuple[-1]) #output: 100
+
+# using slicing
+print(my_tuple[1:]) #output: (10, 100, 1000)
+print(my_tuple[:-2]) #output:(1, 10)
+
+```
+**3. Delete**
+Due to the immutability of tuple, we can not change the elements in the tuple. That means can not delete the element, but it is possible to delete the whole tuple.
+```python
+my_tuple = 1, 2, 3, 
+del my_tuple
+print(my_tuple)    # NameError: name 'my_tuple' is not defined
+```
+
+
+**4. Unpacking**
+```python
+my_tuple = (1, 10, 100, 1000)
+
+a,b,c,d = my_tuple
+print(a) #output: 1
+print(b) #output: 10
+print(c) #output: 100
+print(d) #output: 1000
+```
+When unpacking, the number of variables on the left must match the number of values in the tuple
+
+**5. Tuple methods**
+- count()
+- index()
+```python
+my_tuple = ('a', 'p', 'p', 'l', 'e',)
+
+print(my_tuple.count('p'))  # Output: 2
+print(my_tuple.index('l'))  # Output: 3
+```
 
 ## Dictionary
+**Dictionary Features:**
+- Dictionary is mutable.
+- Dictionary is dynamic. It can grow and shrink as needed.
+- Dictionary can be nested
+- The values contained in the dictionary don’t need to be the same type.
+
+In Python 3.6x dictionaries have become ordered collections by default. Your results may vary depending on what Python version you're using.
+
+**1. Creating**
+- curly braces {}
+- dict()
+```python
+# dictionary with curly braces
+my_dict = {1: 'apple', 2: 'banana'}
+
+# using dict()
+my_dict = dict({1:'apple', 2:'banana'})
+```
+
+**2. Add and Update**
+
+If the key is already present, then the existing value gets updated. 
+
+If the key is not present, a new (key: value) pair is added to the dictionary.
+```
+my_dict = {'name': 'Mike','age': 26}
+
+# update value
+my_dict['age'] = 27
+print(my_dict) #Output: {'name': 'Mike', 'age': 27}
+
+# add item
+my_dict['address'] = 'Downtown'
+print(my_dict) # Output: {'name': 'Mike', 'age': 27, 'address': 'Downtown'}
+```
+
+**3. Read**
+- dict[key]
+- get[]
+```
+# [] vs get for retrieving elements
+my_dict = {'name': 'Jack', 'age': 26}
+
+print(my_dict['name']) # Output: Jack
+print(my_dict.get('age')) # Output: 26
+
+# Trying to access keys which doesn't exist throws error
+print(my_dict.get('address')) # Output None
+print(my_dict['address']) # KeyError
+```
+
+**4. Delete**
+
+
 
 ## String
