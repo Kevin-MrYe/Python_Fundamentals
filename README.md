@@ -4,10 +4,28 @@ I passed the PECP certification with an overall score of 92%. You could check th
 Click the corresponding dicectory and you will see the source file and explaination in README file.
 
 ## Table of Content
-* [1. Python_Fundamentals](https://github.com/Kevin-MrYe/Python_PCEP/tree/master/Python_Fundamentals)
+* [1. Python Fundamentals](https://github.com/Kevin-MrYe/Python_PCEP/tree/master/Python_Fundamentals)
   * Definitions of terms
   * Print ( )
   * Input ( )
   * Literals
-  * Operators
+  * Arithmetic Operators
+  * Relational Operators
+  * Logical operators
+  * Bitwise operators
   * Variables
+* [2. Control Flow](https://github.com/Kevin-MrYe/Python_PCEP/tree/master/Control_Flows)
+  * Conditional statements
+  * While loop
+  * For Loop
+  * Break and Continue
+  * While-else and For-else
+  * Range()
+* [3. Data Collection](https://github.com/Kevin-MrYe/Python_PCEP/tree/master/Data_Collections)
+  * List
+  * Slice
+  * Tuple
+  * Dictionary
+* [4. Functions and Exceptions](https://github.com/Kevin-MrYe/Python_PCEP/tree/master/Functions_and_Exceptions)
+  * Function
+  * Exceptions
