@@ -329,7 +329,62 @@ print(my_dict['address']) # KeyError
 ```
 
 **4. Delete**
+- pop(key)
+- popitem()
+- clear()
+- del
+```python
+# Removing elements from a dictionary
+
+# create a dictionary
+squares = {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+# remove a particular item, returns its value
+print(squares.pop(4)) # Output: 16
+print(squares) # Output: {1: 1, 2: 4, 3: 9, 5: 25}
+
+# remove an item, return (key,value)
+print(squares.popitem()) # Output: (5, 25)
+print(squares) # Output: {1: 1, 2: 4, 3: 9}
+
+# remove all items
+squares.clear()
+print(squares) # Output: {}
+
+# delete the dictionary itself
+del squares
+print(squares) # Throws Error
+```
+
+**Note:**
+
+- pop() removes an item with the provided key and returns the value
+- popitem() remove and return a (key, value) pair from the dictionary. Pairs are returned in (Last-in-First-out) order
+- clear() remove all elements
+- del remove single element or the entire dictionary itself
+
+**5. Iterate through dict**
+- keys()
+- values()
+- items()
+```python
+dict = {
+        "cat": "chat",
+        "dog": "chien",
+        "horse": "cheval"
+        }
+print(dict.keys()) #output: dict_keys(['cat', 'dog', 'horse'])
+print(dict.values())  #output: dict_keys(['chat', 'chien', 'cheval'])
+print(dict.items())  #output: dict_keys([('cat', 'chat'), ('dog', 'chien'), ('horse', 'cheval')])
+
+```
 
 
 
-## String
+**Note:**
+
+- dict.keys() returns an iterable object consisting of all the keys
+- dict.values() return an iterable object consisting of all the values
+- dict.items() return tuples where each tuple is a key-value pair
+
+
