@@ -220,3 +220,24 @@ short_list.append(2)
 short_list.depend(3) # AttributeError
 ```
 
+**2. try-except**
+```
+while True:
+    try:
+        number = int(input("Enter an int number: "))
+        print(5/number)
+        break
+    except (ValueError, TypeError):
+        print("Wrong value or Wrong type.")
+    except ZeroDivisionError:
+        print("Sorry. I cannot divide by zero.")
+    except:
+        print("I don't know what to do...")
+```
+
+**Note:**
+
+- If one of the except branches is executed, the other branches will be skipped.
+- Specify a particular built-in exception only once.
+- Default (or generic) exception, that is the one with no name specified, should be placed at the bottom of the branch.
+- It is possible to handle multiple built-in exceptions within a single except clause.
